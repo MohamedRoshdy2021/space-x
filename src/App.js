@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Missions from "./components/Missions";
 import Profile from "./components/Profile";
 import Rockets from "./components/Rockets";
+import Dragons from "./components/Dragons";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/Rockets" element={<Rockets />} />
       <Route path="/Missions" element={<Missions />} />
+      <Route path="/Dragons" element={<Dragons />} />
       <Route path="/Profile" element={<Profile />} />
     </Routes>
   );
