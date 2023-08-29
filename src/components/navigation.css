@@ -14,3 +14,9 @@
 .active {
     color: red;
 }
+.logo{
+    width: 10%;
+}
+.logo-container {
+    display: flex;
+}

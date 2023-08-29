@@ -1,11 +1,13 @@
 import React from "react";
 import "./navigation.css";
 import { NavLink } from "react-router-dom";
+
 const Navigations = () => {
   return (
     <nav className="navigation">
-      <div>
-        <h1>Logo</h1>
+      <div className="logo-container">
+        <img className="logo" src ={require("../assets/planet.png")} alt="planet-logo" />
+        <h1>Space Travelers hub</h1>
       </div>
       <ul className="nav-lists">
         <li className="nav-link">
