@@ -1,4 +1,4 @@
-const Rockets =()=> {
+function Rockets () {
     return(
         <div>
             <h1>Rockets</h1>
