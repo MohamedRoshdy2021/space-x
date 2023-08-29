@@ -1,7 +1,7 @@
 import React from 'react';
 import './navigation.css';
 import { NavLink } from 'react-router-dom';
-import img from "../assets/planet.png"
+import img from '../assets/planet.png';
 
 const Navigations = () => (
   <nav className="navigation">
