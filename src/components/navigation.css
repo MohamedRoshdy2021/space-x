@@ -11,3 +11,6 @@
     display: flex;
     column-gap: 15px;
 }
+.active {
+    color: red;
+}
