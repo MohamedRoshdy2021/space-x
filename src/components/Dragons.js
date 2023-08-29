@@ -1,5 +1,4 @@
-import React from "react";
-const Dragons =()=> {
+function Dragons () {
     return(
         <div>
             <h1>This is the Dragons page</h1>

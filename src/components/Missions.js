@@ -1,4 +1,4 @@
-const Missions = ()=> {
+function Missions (){
     return(
         <div>
             <h1>Missions Page</h1>
