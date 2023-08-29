@@ -1,0 +1,13 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav-lists {
+    display: flex;
+    column-gap: 15px;
+}

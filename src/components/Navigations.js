@@ -1,10 +1,14 @@
 import React from "react";
+import './navigation.css';
 import { NavLink } from "react-router-dom";
 const Navigations = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="navigation">
+      <div>
+        <h1>Logo</h1>
+        </div>
+      <ul className="nav-lists">
+        <li className="nav-link">
           <NavLink exact='true' to="/Rockets" activeclassname="active">Rockets</NavLink>
         </li>
         <li>

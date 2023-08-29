@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import Navigations from './Navigations';
+import Navigations from './components/Navigations';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
