@@ -20,6 +20,11 @@ const Navigations = () => {
             Missions
           </NavLink>
         </li>
+        <li>
+          <NavLink exact="true" to="/Dragons" activeclassname="active">
+            Dragons
+          </NavLink>
+        </li>
         <li>|</li>
         <li>
           <NavLink exact="true" to="/Profile" activeclassname="active">
