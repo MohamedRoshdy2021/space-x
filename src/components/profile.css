@@ -1,7 +1,8 @@
 .profile {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
+  width: 90%;
 }
 
 .profile tr th {
@@ -27,4 +28,21 @@ td {
   vertical-align: top;
   padding: 6px;
   font-size: 18px;
+}
+
+.Rockets-profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rockets-profile-container h2 {
+  font-size: 2.5rem;
+}
+
+.Rockets-profile-container p {
+  font-size: 1.25rem;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
 }
