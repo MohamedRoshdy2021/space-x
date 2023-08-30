@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, selectRockets } from '../Redux/Rockets/RocketsSlice';
+import { reserveRocket, cancelReservation, fetchRocketsData } from '../Redux/Rockets/RocketsSlice';
 import './Rockets.css';
 
 function Rockets() {
   const dispatch = useDispatch();
-  const rockets = useSelector(selectRockets);
+  const rockets = useSelector((state) => state.rockets.data);
+  const reservedRockets = useSelector((state) => state.rockets.reservedRockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
+    dispatch(fetchRocketsData());
   }, [dispatch]);
 
-  const [reservedRockets, setReservedRockets] = useState([]);
-
   const toggleReservation = (rocketId) => {
-    setReservedRockets((prevReserved) => {
-      if (prevReserved.includes(rocketId)) {
-        return prevReserved.filter((id) => id !== rocketId);
-      }
-      return [...prevReserved, rocketId];
-    });
+    if (reservedRockets.includes(rocketId)) {
+      dispatch(cancelReservation(rocketId));
+    } else {
+      dispatch(reserveRocket(rocketId));
+    }
   };
 
   return (
