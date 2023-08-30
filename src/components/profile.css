@@ -1,0 +1,28 @@
+.profile {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.profile tr th {
+  font-size: 28px;
+  text-align: left;
+  vertical-align: top;
+  height: 50px;
+}
+td {
+    width: 33%;
+}
+.profile-dragons {
+    width: 100%;
+    margin: 0 80px;
+    border-collapse: collapse;
+}
+
+.profile-dragons tbody tr td {
+    border: 1px solid #999;
+    height: 40px;
+    vertical-align: top;
+    padding: 6px;
+    font-size: 18px;
+  }
