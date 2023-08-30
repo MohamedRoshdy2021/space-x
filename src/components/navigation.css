@@ -1,22 +1,27 @@
 * {
-    list-style: none;
-    text-decoration: none;
+  list-style: none;
+  text-decoration: none;
 }
+
 .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
 .nav-lists {
-    display: flex;
-    column-gap: 15px;
+  display: flex;
+  column-gap: 15px;
 }
+
 .active {
-    color: red;
+  color: red;
 }
-.logo{
-    width: 10%;
+
+.logo {
+  width: 10%;
 }
+
 .logo-container {
-    display: flex;
+  display: flex;
 }
