@@ -1,0 +1,49 @@
+.parent-div {
+  display: flex;
+  align-items: start;
+  width: 95%;
+  gap: 2rem;
+  margin: 1rem auto 0;
+  position: relative;
+  top: 20px;
+  bottom: 20px;
+}
+
+.rockets-image {
+  width: 200px;
+  height: 160px;
+}
+
+.text-div h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.reserve-button {
+  background-color: #2870f4;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-reserve-button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  color: gray;
+}
+
+.reserved-text {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.reserved-popup {
+  background-color: #0daa8b;
+  height: 16px;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+}

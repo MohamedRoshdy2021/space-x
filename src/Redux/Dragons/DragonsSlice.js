@@ -1,24 +1,23 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const url = "https://api.spacexdata.com/v4/dragons";
+const url = 'https://api.spacexdata.com/v4/dragons';
 const initialState = {
   isLoading: false,
   data: [],
-  error: "",
+  error: '',
   joinedDragons: [],
 };
-const getData = (data) =>
-  data.map((dragons) => ({
-    id: dragons.id,
-    name: dragons.name,
-    description: dragons.description,
-    image: dragons.flickr_images,
-    reserved: false,
-   
-  }));
+const getData = (data) => data.map((dragons) => ({
+  id: dragons.id,
+  name: dragons.name,
+  description: dragons.description,
+  image: dragons.flickr_images,
+  reserved: false,
+
+}));
 export const fetchDragonsData = createAsyncThunk(
-  "dragons/fetchDragons",
+  'dragons/fetchDragons',
   async () => {
     try {
       const response = await axios.get(url);
@@ -27,10 +26,10 @@ export const fetchDragonsData = createAsyncThunk(
     } catch (error) {
       throw new Error(error);
     }
-  }
+  },
 );
 const dragonSlice = createSlice({
-  name: "dragons",
+  name: 'dragons',
   initialState,
   reducers: {
     reserveDragon: (state, action) => {
@@ -57,31 +56,30 @@ const dragonSlice = createSlice({
         ...state,
         data: newState,
         joinedDragons: state.joinedDragons.filter(
-          (dragonId) => dragonId !== action.payload
+          (dragonId) => dragonId !== action.payload,
         ),
       };
     },
   },
-  
+
   extraReducers: (builder) => {
     builder
-        .addCase(fetchDragonsData.pending, (state) => ({
-            ...state,
-            isLoading: true,
-        }))
-        .addCase(fetchDragonsData.fulfilled, (state, action) => ({
-            ...state,
-            isLoading: false,
-            data: action.payload,
+      .addCase(fetchDragonsData.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(fetchDragonsData.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        data: action.payload,
 
-        }))
-        .addCase(fetchDragonsData.rejected, (state,action) => ({
-            ...state,
-            isLoading: false,
-            error: action.error.message,
-        }));
-  }
-
+      }))
+      .addCase(fetchDragonsData.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error.message,
+      }));
+  },
 
 });
 

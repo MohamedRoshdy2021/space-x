@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import './Dragons.css'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import './Dragons.css';
 import {
   fetchDragonsData,
   reserveDragon,
   cancelReserveDragon,
-} from "../Redux/Dragons/DragonsSlice";
-
+} from '../Redux/Dragons/DragonsSlice';
 
 function Dragons() {
   const dispatch = useDispatch();
-  const { isLoading, data, error, joinedDragons } = useSelector(
-    (state) => state.dragons
+  const {
+    isLoading, data, error, joinedDragons,
+  } = useSelector(
+    (state) => state.dragons,
   );
   useEffect(() => {
     dispatch(fetchDragonsData());
@@ -29,8 +30,6 @@ function Dragons() {
   if (error) {
     return <div>{error}</div>;
   }
-
-
 
   return (
     <div className="dragons-container">

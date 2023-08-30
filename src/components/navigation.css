@@ -16,14 +16,13 @@
 .nav-lists {
   display: flex;
   column-gap: 15px;
- 
-  
 }
+
 .nav-lists a {
   color: rgb(88, 156, 230);
   font-size: 20px;
-  
 }
+
 .nav-lists .active {
   text-decoration: underline;
 }
