@@ -44,5 +44,7 @@ td {
 .Rockets-profile-container p {
   font-size: 1.25rem;
   border-radius: 4px;
-  padding: 0.3rem 0.5rem;
+  background-color: aliceblue;
+  padding: 0.7rem 1.8rem;
+  border: 1px solid gray;
 }
