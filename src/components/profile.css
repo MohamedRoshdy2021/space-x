@@ -30,21 +30,5 @@ td {
   font-size: 18px;
 }
 
-.Rockets-profile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.Rockets-profile-container h2 {
-  font-size: 2.5rem;
-}
 
-.Rockets-profile-container p {
-  font-size: 1.25rem;
-  border-radius: 4px;
-  background-color: aliceblue;
-  padding: 0.7rem 1.8rem;
-  border: 1px solid gray;
-}
