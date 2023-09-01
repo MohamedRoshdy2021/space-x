@@ -1,15 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom'; 
+import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Navigations from '../Navigations';
-
 
 test('renders navigation links', () => {
   const { getByText, getByAltText } = render(
     <BrowserRouter>
       <Navigations />
-    </BrowserRouter>
+    </BrowserRouter>,
   );
 
   // Check if the logo image is present

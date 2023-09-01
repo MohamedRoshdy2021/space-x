@@ -47,8 +47,8 @@ function Profile() {
         <h2>My Rockets</h2>
         <table className="profile-dragons">
           <tbody>
-            {reservedRocketNames.map((rocketName, index) => (
-              <tr key={index}>
+            {reservedRocketNames.map((rocketName) => (
+              <tr key={rocketName.id}>
                 <td>{rocketName}</td>
               </tr>
             ))}

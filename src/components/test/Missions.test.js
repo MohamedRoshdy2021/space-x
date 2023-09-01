@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import Missions from '../Mission/mission'
+import Missions from '../Mission/mission';
 
 const mockStore = configureStore([thunk]);
 

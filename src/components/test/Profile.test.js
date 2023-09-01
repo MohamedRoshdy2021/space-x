@@ -44,7 +44,7 @@ test('should render reserved rockets', () => {
   render(
     <Provider store={store}>
       <Profile />
-    </Provider>
+    </Provider>,
   );
 
   expect(screen.getByText('Rocket 1')).toBeInTheDocument();

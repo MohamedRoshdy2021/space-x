@@ -3,35 +3,35 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import Dragons from '../Dragons';
+import Rockets from '../Rockets'; // Make sure to use the correct import path
 
 const mockStore = configureStore([thunk]);
 
-test('matches snapshot for Dragons component', () => {
+test('matches snapshot for Rockets component', () => {
   const store = mockStore({
-    dragons: {
+    rockets: {
       isLoading: false,
       data: [
         {
           id: 1,
-          name: 'Dragon 1',
+          rocket_name: 'Rocket 1',
           description: 'Description 1',
-          image: 'dragon1.jpg',
+          flickr_images: 'rocket1.jpg',
         },
         {
           id: 2,
-          name: 'Dragon 2',
+          rocket_name: 'Rocket 2',
           description: 'Description 2',
-          image: 'dragon2.jpg',
+          flickr_images: 'rocket2.jpg',
         },
       ],
-      joinedDragons: [1],
+      reservedRockets: [1],
     },
   });
 
   const { asFragment } = render(
     <Provider store={store}>
-      <Dragons />
+      <Rockets />
     </Provider>,
   );
 
