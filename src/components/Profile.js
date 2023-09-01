@@ -14,54 +14,49 @@ function Profile() {
     const rocket = rockets.find((rocket) => rocket.id === rocketId);
     return rocket ? rocket.rocket_name : '';
   });
+
   return (
     <div className="profile">
-      <table className="profile-dragons">
-        <thead>
-          <tr>
-            <th><h2>My Dragons</h2></th>
-          </tr>
-          <tbody className="dragon-body">
+      <div className="profile-section">
+        <h2>My Dragons</h2>
+        <table className="profile-dragons">
+          <tbody>
             {reservedDragons.map((dragon) => (
               <tr key={dragon.id}>
                 <td>{dragon.name}</td>
               </tr>
             ))}
           </tbody>
-        </thead>
-      </table>
+        </table>
+      </div>
 
-      <table className="profile-dragons">
-        <thead>
-          <tr>
-            <th><h2>My Missions</h2></th>
-          </tr>
+      <div className="profile-section">
+        <h2>My Missions</h2>
+        <table className="profile-dragons">
           <tbody>
-          {reservedMissions.map((mission) => (
-            <tr key={mission.id}>
-              <td>{mission.name}</td>
-            </tr>
-          ))}
+            {reservedMissions.map((mission) => (
+              <tr key={mission.id}>
+                <td>{mission.name}</td>
+              </tr>
+            ))}
           </tbody>
-        </thead>
-      </table>
+        </table>
+      </div>
 
-
-      <table className="profile-dragons">
-        <thead>
-          <tr>
-            <th><h2>My Rocketss</h2></th>
-          </tr>
+      <div className="profile-section">
+        <h2>My Rockets</h2>
+        <table className="profile-dragons">
           <tbody>
-          {reservedRocketNames.map((rocketName) => (
-            <tr key={rocketName.id}>
-              <td>{rocketName}</td>
-            </tr>
-          ))}
+            {reservedRocketNames.map((rocketName, index) => (
+              <tr key={index}>
+                <td>{rocketName}</td>
+              </tr>
+            ))}
           </tbody>
-        </thead>
-      </table>
+        </table>
+      </div>
     </div>
   );
 }
+
 export default Profile;
