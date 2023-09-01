@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot for Dragons component 1`] = `
+<DocumentFragment>
+  <div
+    class="dragons-container"
+  >
+    <div
+      class="dragon-left"
+    >
+      <img
+        alt="Dragon 1"
+        class="dragon-image"
+        src="dragon1.jpg"
+      />
+      <div
+        class="dragon-details"
+      >
+        <h2
+          class="dragon-name"
+        >
+          Dragon 1
+        </h2>
+        <p
+          class="dragon-desc"
+        >
+           
+          <span
+            class="reserved-badge"
+          >
+            Reserved
+          </span>
+          Description 1
+        </p>
+        <button
+          class="dragon-btn cancel"
+          data-testid="cancel-reservation-button-1"
+          type="button"
+        >
+          Cancel Reservation
+        </button>
+      </div>
+    </div>
+    <div
+      class="dragon-left"
+    >
+      <img
+        alt="Dragon 2"
+        class="dragon-image"
+        src="dragon2.jpg"
+      />
+      <div
+        class="dragon-details"
+      >
+        <h2
+          class="dragon-name"
+        >
+          Dragon 2
+        </h2>
+        <p
+          class="dragon-desc"
+        >
+          Description 2
+        </p>
+        <button
+          class="dragon-btn"
+          data-testid="reserve-button-2"
+          type="button"
+        >
+          Reserve dragon
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot for Rockets component 1`] = `
+<DocumentFragment>
+  <div
+    class="dragons-container"
+  >
+    <div
+      class="dragon-left"
+    >
+      <img
+        alt="Dragon 1"
+        class="dragon-image"
+        src="dragon1.jpg"
+      />
+      <div
+        class="dragon-details"
+      >
+        <h2
+          class="dragon-name"
+        >
+          Dragon 1
+        </h2>
+        <p
+          class="dragon-desc"
+        >
+           
+          <span
+            class="reserved-badge"
+          >
+            Reserved
+          </span>
+          Description 1
+        </p>
+        <button
+          class="dragon-btn cancel"
+          data-testid="cancel-reservation-button-1"
+          type="button"
+        >
+          Cancel Reservation
+        </button>
+      </div>
+    </div>
+    <div
+      class="dragon-left"
+    >
+      <img
+        alt="Dragon 2"
+        class="dragon-image"
+        src="dragon2.jpg"
+      />
+      <div
+        class="dragon-details"
+      >
+        <h2
+          class="dragon-name"
+        >
+          Dragon 2
+        </h2>
+        <p
+          class="dragon-desc"
+        >
+          Description 2
+        </p>
+        <button
+          class="dragon-btn"
+          data-testid="reserve-button-2"
+          type="button"
+        >
+          Reserve dragon
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

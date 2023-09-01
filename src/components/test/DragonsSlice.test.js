@@ -14,14 +14,14 @@ describe('dragonsSlice', () => {
       await store.dispatch(fetchDragonsData());
     });
   
-    it('should handle fetching rockets data successfully', () => {
+    it('should handle fetching dragons data successfully', () => {
       const state = store.getState().dragons;
       expect(state.isLoading).toBe(false);
       expect(state.error).toBe('');
       expect(state.data.length).toBeGreaterThan(0);
     });
   
-    it('should handle fetching rockets data failure', async () => {
+    it('should handle fetching dragons data failure', async () => {
       const invalidUrl = 'https://api.spacexdata.com/v4/invalid-url';
       try {
         await store.dispatch(fetchDragonsData(invalidUrl));
@@ -32,7 +32,7 @@ describe('dragonsSlice', () => {
       }
     });
   
-    it('should reserve a rocket', () => {
+    it('should reserve a dragon', () => {
         const stateBefore = store.getState().dragons;
         const dragonIdToReserve = stateBefore.data[0].id;
         store.dispatch(reserveDragon(dragonIdToReserve));
@@ -48,7 +48,7 @@ describe('dragonsSlice', () => {
       });
       
   
-    it('should cancel reservation of a rocket', () => {
+    it('should cancel reservation of a dragon', () => {
         const stateBefore = store.getState().dragons;
         const dragonIdToCancel = stateBefore.data[0].id;
       
