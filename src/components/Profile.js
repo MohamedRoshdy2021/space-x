@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 import './profile.css';
 
 function Profile() {
+  const { missions, joinedMissions } = useSelector((store) => store.missions);
   const { data, joinedDragons } = useSelector((store) => store.dragons);
   const reservedDragons = data.filter((dragon) => joinedDragons.includes(dragon.id));
-
+  const reservedMissions = missions.filter((mission) => joinedMissions.includes(mission.id));
   const reservedRockets = useSelector((state) => state.rockets.reservedRockets);
   const rockets = useSelector((state) => state.rockets.data);
 
@@ -36,19 +37,30 @@ function Profile() {
             <th><h2>My Missions</h2></th>
           </tr>
           <tbody>
-            Place holder for my missons
+          {reservedMissions.map((mission) => (
+            <tr key={mission.id}>
+              <td>{mission.name}</td>
+            </tr>
+          ))}
           </tbody>
         </thead>
       </table>
 
-      <div className="profile-dragons">
-        <div className="Rockets-profile-container">
-          <h2>My Rockets:</h2>
+
+      <table className="profile-dragons">
+        <thead>
+          <tr>
+            <th><h2>My Rocketss</h2></th>
+          </tr>
+          <tbody>
           {reservedRocketNames.map((rocketName) => (
-            <p key={rocketName.id}>{rocketName}</p>
+            <tr key={rocketName.id}>
+              <td>{rocketName}</td>
+            </tr>
           ))}
-        </div>
-      </div>
+          </tbody>
+        </thead>
+      </table>
     </div>
   );
 }
