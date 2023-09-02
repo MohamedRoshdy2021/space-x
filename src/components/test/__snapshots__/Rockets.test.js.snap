@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot for Rockets component 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="parent-div"
+    >
+      <div>
+        <img
+          class="rockets-image"
+          src="rocket1.jpg"
+        />
+      </div>
+      <div
+        class="text-div"
+      >
+        <h2>
+          Rocket 1
+        </h2>
+        <div
+          class="reserved-text"
+        >
+          <p
+            class="reserved-popup"
+          >
+            Reserved
+          </p>
+          <p>
+            Description 1
+          </p>
+        </div>
+        <button
+          class="cancel-reserve-button"
+          type="button"
+        >
+          Cancel Reservation
+        </button>
+      </div>
+    </div>
+    <div
+      class="parent-div"
+    >
+      <div>
+        <img
+          class="rockets-image"
+          src="rocket2.jpg"
+        />
+      </div>
+      <div
+        class="text-div"
+      >
+        <h2>
+          Rocket 2
+        </h2>
+        <div
+          class="reserved-text"
+        >
+          <p>
+            Description 2
+          </p>
+        </div>
+        <button
+          class="reserve-button"
+          type="button"
+        >
+          Reserve Rocket
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

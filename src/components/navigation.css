@@ -1,0 +1,36 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: silver solid 2px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 1rem;
+}
+
+.nav-lists {
+  display: flex;
+  column-gap: 15px;
+}
+
+.nav-lists a {
+  color: rgb(88, 156, 230);
+  font-size: 20px;
+}
+
+.nav-lists .active {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 10%;
+}
+
+.logo-container {
+  display: flex;
+}
